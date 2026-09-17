@@ -13,8 +13,7 @@ import {
   photo,
   resumePdf,
   site,
-  skillGroups,
-  skillsSection,
+  skillSections,
 } from "../data/site";
 
 export default function Home() {
@@ -147,25 +146,29 @@ export default function Home() {
 
         <section id="skills">
           <div className="wrap">
-            <div className="section-head">
-              <div>
-                <p className="eyebrow">{skillsSection.eyebrow}</p>
-                <h2>{skillsSection.heading}</h2>
-              </div>
-              <p className="lede">{skillsSection.lede}</p>
-            </div>
-            <div className="skill-groups">
-              {skillGroups.map((group) => (
-                <div className="skill-group" key={group.title}>
-                  <h3>{group.title}</h3>
-                  <ul>
-                    {group.items.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
+            {skillSections.map((band) => (
+              <div className="skill-band" key={band.eyebrow}>
+                <div className="section-head">
+                  <div>
+                    <p className="eyebrow">{band.eyebrow}</p>
+                    <h2>{band.heading}</h2>
+                  </div>
+                  <p className="lede">{band.lede}</p>
                 </div>
-              ))}
-            </div>
+                <div className="skill-groups">
+                  {band.groups.map((group) => (
+                    <div className="skill-group" key={group.title}>
+                      <h3>{group.title}</h3>
+                      <ul>
+                        {group.items.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 

@@ -179,14 +179,14 @@ export const moreProjects: Project[] = [
   {
     title: "Real-time hardware game",
     description:
-      "Bare-metal game on a Microchip Curiosity Nano. Direct register config, 1 ms RMS scheduler, SPI OLED, and a renderer rewrite that lifted the display from ~10 to 30+ FPS.",
+      "Bare-metal game on a Microchip Curiosity Nano with joystick, 2x2 buttons, and OLED. Direct register config, 1 ms RMS scheduler, SPI peripherals, and a renderer rewrite that lifted the display from ~10 to ~30–40 FPS.",
     tags: ["C", "Embedded", "RMS"],
     linkLabel: "",
   },
   {
     title: "CTF challenge engineering",
     description:
-      "Designed web, crypto, and maze challenges for a university Capture the Flag event, including containerized instances and dynamic layouts so answers could not be hardcoded.",
+      "Designed web, crypto, and maze challenges for a university Capture the Flag event — including an SSRF challenge, encoded-message puzzles, Dockerized instances, and dynamic layouts so answers could not be hardcoded.",
     tags: ["Python", "Docker", "Security"],
     linkLabel: "",
   },
@@ -207,7 +207,7 @@ export const moreProjects: Project[] = [
   {
     title: "Client-server lab",
     description:
-      "Concurrent socket and HTTP service with a JavaScript client, REST plus WebSockets, and thick / thin / chubby client modes to study real protocol tradeoffs.",
+      "Python server and JavaScript client for real-time exchange over sockets and HTTP. REST plus WebSockets, concurrent clients, JSON validation, and thick / thin / chubby client modes to study protocol tradeoffs.",
     tags: ["Python", "WebSockets", "REST"],
     linkLabel: "",
   },
@@ -216,6 +216,13 @@ export const moreProjects: Project[] = [
     description:
       "Led a small team through the software lifecycle: Android client, HSQLDB, and JUnit coverage for a complete booking flow.",
     tags: ["Java", "Android", "HSQLDB"],
+    linkLabel: "",
+  },
+  {
+    title: "Weather data analysis",
+    description:
+      "Statistical analysis of multi-location weather samples in R and SQL — clean, query, and visualize climate trends and regional variance.",
+    tags: ["R", "SQL", "Analytics"],
     linkLabel: "",
   },
 ];
@@ -251,15 +258,17 @@ export const jobs: Role[] = [
     ],
     bullets: [
       "Deliver mail and parcels on assigned Winnipeg routes as a letter carrier.",
-      "Keep to service standards while working independently in all weather.",
-      "Coordinate with depot staff so daily delivery stays accurate and on time.",
+      "Follow depot procedures and service standards while working independently in all weather.",
       "Stay accountable for the mail, vehicle checks, and public-facing service on every shift.",
+      "Coordinate with depot staff so daily delivery stays accurate when routes or volumes change.",
+      "Keep composure and attention to detail in a public role that depends on trust and on-time work.",
     ],
     skills: [
       "Time management",
       "Route planning",
       "Customer service",
       "Working independently",
+      "Following procedures",
       "Attention to detail",
       "Reliability",
     ],
@@ -276,14 +285,16 @@ export const jobs: Role[] = [
     ],
     bullets: [
       {
-        before: "Run my studio and shipped ",
+        before: "Designed and shipped a live client site at ",
         label: "aksharelectric.ca",
         href: "https://aksharelectric.ca/",
         after: " with TypeScript, React, and Firebase.",
       },
-      "Took AI-assisted drafts, then rewrote the pieces that failed on reliability, security, and brand fit.",
-      "Left the codebase structured for later pages, hosting, and content updates.",
-      "Owned client communication, visual design decisions, and the full delivery from first mock to live site.",
+      "Used AI-assisted tools to prototype quickly, then implemented major customizations by hand so the site matched the client.",
+      "Found and fixed AI-generated errors that hurt reliability, security, and usability.",
+      "Structured the application for later pages, hosting, content updates, and feature expansion.",
+      "Owned client communication, visual design, and the full delivery from first mock to a site that is live in production.",
+      "Run Akshar Digital Architecture as the studio behind that work — brief to launch, not just the code.",
     ],
     skills: [
       "TypeScript",
@@ -294,6 +305,7 @@ export const jobs: Role[] = [
       "Brand systems",
       "AI-assisted development",
       "Web security basics",
+      "SDLC",
     ],
   },
   {
@@ -307,10 +319,12 @@ export const jobs: Role[] = [
       "Picked, packed, and staged orders with speed and accuracy.",
     ],
     bullets: [
-      "Opened and closed a high-volume department with accurate order picking, packing, and staging.",
-      "Coordinated across front-end and warehouse teams during peak periods.",
-      "Learned to stay calm, exact, and accountable when the queue does not wait.",
-      "Handled customer substitutions and handoffs while keeping the floor ready for the next rush.",
+      "Worked in a fast-paced, high-volume Click & Collect department where accuracy and on-time orders were essential.",
+      "Managed the full order path: picking, packing, staging, and handoff with front-end and warehouse teams.",
+      "Opened and closed the department, including operational readiness and clean shift handovers.",
+      "Coordinated across departments to resolve issues during peak volume and competing priorities.",
+      "Handled customer substitutions and public-facing conversations professionally in a busy store.",
+      "Worked independently while supporting team goals — reliability, time management, and following process.",
     ],
     skills: [
       "Customer service",
@@ -318,6 +332,8 @@ export const jobs: Role[] = [
       "Time management",
       "Accuracy under pressure",
       "Department operations",
+      "Shift handovers",
+      "Following procedures",
     ],
   },
   {
@@ -331,10 +347,12 @@ export const jobs: Role[] = [
       "Shipped an async Telegram bot for scripture definitions.",
     ],
     bullets: [
-      "Inventory tracking web app for large events: TypeScript, React, Firebase, SQL.",
-      "Telegram definition bot with async handlers, inline navigation, and fallback search.",
-      "Documented architecture and workflows so production support can continue without me in the room.",
-      "Debugged frontend/backend communication and wrote unit tests for the pieces that had to stay reliable.",
+      "Architected and maintained relational SQL and Firebase databases to track inventory for large events with huge, fast-moving stock.",
+      "Wrote OOP frontend logic, debugged frontend/backend communication, and added unit tests so the system stayed reliable.",
+      "Used AI-assisted tools (Lovable) to prototype, then evaluated and refined generated code for correctness and maintainability.",
+      "Documented architecture and workflow for production support, onboarding, and ongoing maintenance.",
+      "Designed an asynchronous Telegram bot in Python so community members can look up Vachanamrut and cultural definitions without leaving chat.",
+      "Built multi-level inline keyboards, pagination, dictionary lookup with fallback search, and stateless handlers that can serve many users at once.",
     ],
     skills: [
       "TypeScript",
@@ -343,33 +361,67 @@ export const jobs: Role[] = [
       "SQL",
       "Python",
       "Telegram API",
+      "Lovable",
       "Documentation",
       "Unit testing",
+      "Data integrity",
     ],
   },
   {
     title: "Youth supervisor / mentor",
-    org: "BAPS Youth Program · Events · Charities",
+    org: "BAPS Youth Program",
     when: "2016 - present",
     logo: logos.baps,
     kind: "volunteer",
     highlights: [
       "Mentored youth in leadership and teamwork for 6+ years.",
-      "Designed lesson plans and ran community events.",
+      "Designed lesson plans and kept a safe, structured program.",
     ],
     bullets: [
-      "Six-plus years teaching cultural values, leadership, and teamwork to youth.",
-      "Designed lesson plans, ran events, and coached volunteers in high-trust settings.",
-      "Coordinated parking, crowd flow, and task assignment during large public gatherings.",
-      "Kept a safe, structured environment while assigning people work that matched their skills.",
+      "Six-plus years mentoring and supervising youth in a structured cultural development program.",
+      "Give clear instructions, coaching, and direction to participants and volunteers.",
+      "Design lesson plans and facilitate learning sessions while keeping a safe, organized environment.",
+      "Work with supervisors and teammates to coordinate programs when requirements change.",
+      "Balance several responsibilities at once without losing track of participants' needs and program goals.",
+      "Practice active listening, conflict resolution, and interpersonal communication every week with youth, volunteers, and supervisors.",
+      "Stay accountable for the safety, organization, and successful operation of the activities I am given.",
     ],
     skills: [
       "Leadership",
       "Mentoring",
-      "Event planning",
-      "Volunteer coordination",
-      "Public speaking",
+      "Active listening",
+      "Clear communication",
       "Conflict resolution",
+      "Lesson planning",
+      "Accountability",
+    ],
+  },
+  {
+    title: "Event volunteer",
+    org: "BAPS Events · Charities",
+    when: "2018 - present",
+    logo: logos.baps,
+    kind: "volunteer",
+    highlights: [
+      "Helped run large public events with volunteers and security teams.",
+      "Assigned people work that matched their skills when the plan changed.",
+    ],
+    bullets: [
+      "Support planning and execution of large community events with volunteers, management teams, and the public.",
+      "Help run traffic and parking with security volunteers so movement stays safe and organized.",
+      "Assign volunteers based on their abilities and what the operation needs that day.",
+      "Lead volunteer teams and communicate plans so tasks actually get finished.",
+      "Sit in team meetings to coordinate responsibilities, spot gaps, and adjust when circumstances change.",
+      "Stay calm and professional in busy public environments with competing demands.",
+      "Support BAPS Charities events on health, safety, and public awareness, including setup and public-facing help.",
+    ],
+    skills: [
+      "Crowd and traffic coordination",
+      "Situational awareness",
+      "Volunteer leadership",
+      "Decision-making",
+      "Public safety",
+      "Team meetings",
     ],
   },
 ];
@@ -379,59 +431,87 @@ export const volunteerRoles = jobs.filter((role) => role.kind === "volunteer");
 
 // ---------------------------------------------------------------------------
 // 8. SKILLS
-//    Written for hiring managers in public service, retail, and community
-//    work — computing is one column, not the whole story.
+//    Two blocks: workplace / technical skills, then computer science.
 // ---------------------------------------------------------------------------
-export const skillsSection = {
-  eyebrow: "Skills",
-  heading: "What I bring to a team.",
-  lede:
-    "Operations, people, and workplace tools first. Computing is there when a role needs it — this site is also for hiring managers who are not filling a programmer seat.",
-};
-
-export const skillGroups = [
+export const skillSections = [
   {
-    title: "Operations",
-    items: [
-      "Mail and parcel delivery",
-      "Click & Collect order picking",
-      "Opening and closing a department",
-      "Inventory and stock tracking",
-      "Route planning",
-      "Safety-conscious fieldwork",
+    eyebrow: "Technical skills",
+    heading: "How I work when it counts.",
+    lede:
+      "Communication, accuracy, leadership, and composure — the skills my public-service and operations applications actually lead with.",
+    groups: [
+      {
+        title: "Communication & leadership",
+        items: [
+          "Clear communication",
+          "Active listening",
+          "Mentoring and coaching",
+          "Team supervision",
+          "Public-facing service",
+          "Conflict resolution",
+        ],
+      },
+      {
+        title: "Accuracy & pressure",
+        items: [
+          "Attention to detail",
+          "Composure in high-volume work",
+          "Task prioritization",
+          "Following procedures",
+          "Accountability",
+          "Structured problem-solving",
+          "Learning complex systems",
+        ],
+      },
     ],
   },
   {
-    title: "People & service",
-    items: [
-      "Customer service",
-      "Mentoring youth",
-      "Event and crowd coordination",
-      "Volunteer leadership",
-      "Public speaking",
-      "Calm under pressure",
-    ],
-  },
-  {
-    title: "Workplace tools",
-    items: [
-      "Microsoft Office",
-      "Canva",
-      "Inventory systems",
-      "Class 4 driver's licence",
-      "Android devices",
-      "Independent shift work",
-    ],
-  },
-  {
-    title: "Computing",
-    items: [
-      "Python, Java, JavaScript",
-      "React, Firebase, SQL",
-      "Git and Linux",
-      "Websites from brief to live",
-      "Clear documentation",
-      "Debugging under a deadline",
+    eyebrow: "Computer science",
+    heading: "Languages, systems, and software.",
+    lede:
+      "Full-stack web work, databases, and systems from class and shipped projects — the computing side of the same person.",
+    groups: [
+      {
+        title: "Languages",
+        items: [
+          "Python",
+          "Java",
+          "C / C++",
+          "JavaScript",
+          "TypeScript",
+          "Go",
+          "R",
+        ],
+      },
+      {
+        title: "Frameworks & web",
+        items: [
+          "HTML / CSS",
+          "React",
+          "REST APIs",
+          "WebSockets",
+          "Vite",
+        ],
+      },
+      {
+        title: "Cloud & data",
+        items: [
+          "Firebase",
+          "SQL",
+          "HSQLDB",
+          "JSON",
+        ],
+      },
+      {
+        title: "Tools & methods",
+        items: [
+          "Git",
+          "Linux",
+          "JUnit",
+          "OOP and SDLC",
+          "Agile workflows",
+        ],
+      },
     ],
   },
 ];
@@ -442,7 +522,7 @@ export const skillGroups = [
 export const education = {
   heading: "B.Sc. Computer Science",
   copy:
-    "University of Manitoba, graduated June 2026. Coursework in software engineering, embedded systems, web development, operating systems, advanced databases, and parallel systems. Coursera project certificate: Build your business brand using Canva.",
+    "University of Manitoba, graduated June 2026. Coursework and projects in software engineering, embedded and real-time systems, web development, operating systems, advanced databases, networking, concurrent processing, and parallel systems. Coursera project certificate: Build your business brand using Canva.",
 };
 
 // ---------------------------------------------------------------------------
@@ -476,88 +556,92 @@ export const contacts = [
 // 11. RESUME PAGE
 // ---------------------------------------------------------------------------
 export const resume = {
-  subtitle: `Winnipeg, MB · operations, service, and software · harikrushn1972@gmail.com`,
+  subtitle: `Winnipeg, MB · harikrushn1972@gmail.com · +1 (204) 881-4394`,
   summary:
-    "Dependable Winnipeg worker with a Class 4 licence, Canada Post delivery experience, years on a Superstore Click & Collect floor, and 6+ years mentoring youth at BAPS. Also a Computer Science graduate who can ship websites and inventory tools when a role needs that. Comfortable with the public, independent shift work, Microsoft Office, and documenting so the next person can pick up the job.",
+    "Computer Science graduate who also delivers a Canada Post route, opened Superstore Click & Collect, and has mentored youth at BAPS for 6+ years. Hiring managers get the same person either way: accurate under pressure, clear with the public, and able to ship work people actually use.",
   educationTitle: "Bachelor of Science in Computer Science",
-  educationMeta: "University of Manitoba, graduated June 2026",
-  coursework:
-    "Key coursework: Software Engineering, Embedded Systems, Web Development, Operating Systems, Advanced Databases, Parallel Systems.",
+  educationMeta: "University of Manitoba, June 2026",
+  coursework: "",
   experience: [
     {
       title: "Letter carrier",
       meta: "Canada Post · Jul 2026 - present",
       bullets: [
-        "Deliver mail and parcels on assigned Winnipeg routes.",
-        "Keep to service standards while working independently in all weather.",
+        "Deliver mail and parcels independently on assigned Winnipeg routes in all weather, keeping to depot procedures and service standards.",
+        "Stay accountable for the mail, vehicle checks, and every public interaction — time management, attention to detail, and trust on the shift.",
       ],
     },
     {
       title: "Founder / web developer",
-      meta: "Akshar Digital Architecture · TypeScript, React, Firebase · 2026 - present",
+      meta: "Akshar Digital Architecture · 2025 - present",
       bullets: [
-        "Run my studio and shipped a live client site at aksharelectric.ca.",
-        "Customized AI-assisted drafts to match client requirements, then fixed reliability, security, and usability issues.",
-        "Structured the app for later maintenance and feature expansion.",
+        "Shipped aksharelectric.ca live in TypeScript, React, and Firebase — a client site in production, not a mock.",
+        "Used AI to prototype, then rewrote the weak parts by hand until reliability, security, and brand fit held up; structured the codebase so later pages and features can land cleanly.",
       ],
     },
     {
       title: "Personal shopper",
       meta: "Superstore Click & Collect · 2019 - 2023",
       bullets: [
-        "Ran order picking, packing, and staging in a high-volume public department, including open and close.",
+        "Opened and closed a high-volume Click & Collect department, including operational readiness and clean shift handovers.",
+        "Managed picking, packing, and staging with front-end and warehouse teams. Accuracy and composure mattered when the queue did not wait.",
       ],
     },
   ],
   volunteer: [
     {
-      title: "Software volunteer",
-      meta: "B.A.P.S. · TypeScript, React, Firebase, SQL, Python · 2026 - present",
-      bullets: [
-        "Architected relational SQL and Firebase databases to track inventory for large events.",
-        "Wrote OOP frontend logic, debugged interfaces, and added unit tests for reliability.",
-        "Built an async Telegram bot for scripture and cultural definitions.",
-      ],
-    },
-    {
       title: "Youth supervisor / mentor",
       meta: "BAPS Youth Program · 2016 - present",
       bullets: [
-        "Taught and mentored youth in leadership, teamwork, and community values for 6+ years.",
-        "Designed lesson plans, organized events, and coached volunteers.",
+        "Six-plus years mentoring youth in a structured program: lesson plans, coaching volunteers, and accountability for people's safety.",
+        "Practice clear communication, active listening, and conflict resolution with youth, parents, and supervisors every week.",
+      ],
+    },
+    {
+      title: "Software volunteer",
+      meta: "B.A.P.S. · 2025 - present",
+      bullets: [
+        "Built the inventory platform large BAPS events actually run on — React, Firebase, and relational SQL — and documented architecture so the next volunteer can keep shipping.",
+        "Shipped an async Telegram bot for community definitions (inline navigation, fallback search) and added tests around the pieces that had to stay reliable.",
+      ],
+    },
+    {
+      title: "Event volunteer",
+      meta: "BAPS Events · 2018 - present",
+      bullets: [
+        "Support large public gatherings: traffic and parking with security volunteers, crowd flow, and assigning people by skill.",
+        "Lead volunteer teams and communicate instructions so tasks get finished; stay calm and professional when the plan changes.",
       ],
     },
   ],
   projects: [
     {
-      title: "Capture The Flag challenges",
+      title: "Event inventory platform",
       detail:
-        "Python, Docker · Jan 2026 - Apr 2026. Web security, cryptography, and maze challenges with dynamic instances.",
+        "React, Firebase, SQL. Inventory for huge, fast-moving festival stock — OOP frontend, unit tests, and architecture docs so production does not depend on me being in the room.",
     },
     {
       title: "Embedded real-time game",
       detail:
-        "C, Microchip Curiosity Nano · Sep 2025 - Nov 2025. RMS on a 1 ms timer; OLED rendering improved from ~10 FPS to ~30 FPS.",
+        "C on a Microchip Curiosity Nano. Direct register config, RMS on a 1 ms timer, SPI OLED and input; rendering lifted from ~10 FPS to ~30–40 FPS.",
     },
     {
-      title: "Client-server communication",
+      title: "CTF challenges — The Long Con",
       detail:
-        "Python, JavaScript · May 2025 - Jun 2025. Sockets, HTTP, REST, WebSockets, concurrent clients.",
-    },
-    {
-      title: "Air reservation system",
-      detail:
-        "Java, HSQLDB, JUnit · Jan 2025 - Apr 2025. Android app; led a small team through the software lifecycle.",
-    },
-    {
-      title: "Annakut Seva",
-      detail: "React, Firebase. Volunteer item-claiming app for festival offerings.",
+        "Python and Docker. Web, crypto, and maze challenges for a university Capture the Flag, including SSRF and dynamically generated instances so answers could not be hardcoded.",
     },
   ],
   skills: [
-    { label: "Operations", value: "Mail delivery, Click & Collect, inventory, opening/closing, route planning" },
-    { label: "People", value: "Customer service, mentoring, event coordination, volunteer leadership" },
-    { label: "Tools", value: "Microsoft Office, Canva, inventory systems, Class 4 driver's licence" },
-    { label: "Computing", value: "Python, Java, JavaScript, React, Firebase, SQL, Git, Linux" },
+    {
+      label: "Technical",
+      value:
+        "Clear communication, active listening, accuracy, team leadership, composure under pressure, following procedures, structured problem-solving",
+    },
+    {
+      label: "Computer science",
+      value:
+        "Python, Java, C/C++, JavaScript, TypeScript, React, Firebase, SQL, Git, Linux, REST, WebSockets",
+    },
   ],
 };
+

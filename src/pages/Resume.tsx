@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Nav from "../components/Nav";
 import { resume, resumePdf, site } from "../data/site";
 
@@ -16,9 +15,6 @@ export default function Resume() {
             <a className="btn btn-gold" href={resumePdf} download>
               PDF
             </a>
-            <Link className="btn btn-ghost" to="/" style={{ borderColor: "#d4a84b", color: "#15170f" }}>
-              Portfolio
-            </Link>
           </div>
         </div>
 
@@ -29,7 +25,7 @@ export default function Resume() {
         <p>
           <strong>{resume.educationTitle}</strong> — {resume.educationMeta}
         </p>
-        <p>{resume.coursework}</p>
+        {resume.coursework ? <p>{resume.coursework}</p> : null}
 
         <h2>Experience</h2>
         {resume.experience.map((job) => (

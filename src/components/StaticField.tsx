@@ -41,7 +41,7 @@ function buildSpecks(width: number, height: number): Speck[] {
         vy: 0,
         size: tone > 0.9 ? 2 : 1.05 + tone * 0.55,
         light: tone > 0.28,
-        alpha: tone > 0.28 ? 0.16 + tone * 0.28 : 0.2 + tone * 0.15,
+        alpha: tone > 0.28 ? 0.1 + tone * 0.18 : 0.12 + tone * 0.1,
       });
     }
   }

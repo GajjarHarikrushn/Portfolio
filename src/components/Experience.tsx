@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { BulletList, Tags } from "./ProjectCard";
 import type { Role } from "../data/site";
 import { volunteerRoles, workRoles } from "../data/site";
@@ -48,7 +49,7 @@ function RoleDialog({ role, onClose }: { role: Role; onClose: () => void }) {
     };
   }, [onClose]);
 
-  return (
+  return createPortal(
     <div className="modal-backdrop" onClick={onClose}>
       <div
         className="modal"
@@ -79,7 +80,8 @@ function RoleDialog({ role, onClose }: { role: Role; onClose: () => void }) {
           Close
         </button>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }
 
