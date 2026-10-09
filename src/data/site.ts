@@ -556,7 +556,7 @@ export const contacts = [
 // 11. RESUME PAGE
 // ---------------------------------------------------------------------------
 export const resume = {
-  subtitle: `Winnipeg, MB · harikrushn1972@gmail.com · +1 (204) 881-4394`,
+  subtitle: `Winnipeg, MB · harikrushn1972@gmail.com · +1 (204) 881-4394 · linkedin.com/in/harikrushn-gajjar-658b8a285`,
   summary:
     "Computer Science graduate who also delivers a Canada Post route, opened Superstore Click & Collect, and has mentored youth at BAPS for 6+ years. Hiring managers get the same person either way: accurate under pressure, clear with the public, and able to ship work people actually use.",
   educationTitle: "Bachelor of Science in Computer Science",

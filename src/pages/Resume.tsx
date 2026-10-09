@@ -1,5 +1,9 @@
 import Nav from "../components/Nav";
-import { resume, resumePdf, site } from "../data/site";
+import { contacts, resume, resumePdf, site } from "../data/site";
+
+const linkedin = contacts.find((item) => item.label === "LinkedIn");
+const email = contacts.find((item) => item.label === "Email");
+const phone = contacts.find((item) => item.label === "Phone");
 
 export default function Resume() {
   return (
@@ -9,7 +13,29 @@ export default function Resume() {
         <div className="resume-top">
           <div>
             <h1>{site.name}</h1>
-            <p>{resume.subtitle}</p>
+            <p>
+              {site.locationShort}
+              {email ? (
+                <>
+                  {" · "}
+                  <a href={email.href}>{email.value}</a>
+                </>
+              ) : null}
+              {phone ? (
+                <>
+                  {" · "}
+                  <a href={phone.href}>{phone.value}</a>
+                </>
+              ) : null}
+              {linkedin ? (
+                <>
+                  {" · "}
+                  <a href={linkedin.href} target="_blank" rel="noreferrer">
+                    LinkedIn
+                  </a>
+                </>
+              ) : null}
+            </p>
           </div>
           <div className="resume-actions">
             <a className="btn btn-gold" href={resumePdf} download>

@@ -768,6 +768,12 @@ body.resume-page .nav-links a:hover {
   color: #33362d;
 }
 
+.resume-shell .resume-top a {
+  color: #155a3a;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .resume-actions .btn {
   min-width: 128px;
   padding: 12px 22px;
