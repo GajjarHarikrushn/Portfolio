@@ -969,3 +969,39 @@ body.resume-page .nav-links a:hover {
   outline: 2px solid var(--gold);
   outline-offset: 3px;
 }
+
+@media print {
+  nav,
+  .static-field,
+  .resume-actions {
+    display: none !important;
+  }
+
+  html,
+  body,
+  html:has(body.resume-page),
+  body.resume-page {
+    background: #fff !important;
+  }
+
+  .resume-shell {
+    width: 100%;
+    margin: 0;
+    padding: 12mm;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .resume-shell h1 {
+    font-size: 22pt;
+  }
+
+  .resume-shell h2 {
+    break-after: avoid;
+  }
+
+  .resume-shell a {
+    color: #155a3a;
+    text-decoration: none;
+  }
+}
